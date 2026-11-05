@@ -31,6 +31,18 @@ article b{font-size:17px}
 a{color:#f2ff76;font-weight:700}
 footer{color:#c4b9d6}
 @media(max-width:480px){header{padding-top:30px}header .pill{font-size:10px}main{padding:13px}nav button{font-size:13px;padding:10px 13px}.panel{padding:16px}}
+
+/* Bold sports-arcade typography */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+:root{font-family:'Outfit',system-ui,sans-serif}
+header h1{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:900;font-style:italic;letter-spacing:1px;font-size:clamp(56px,12vw,88px);line-height:.9;text-transform:uppercase}
+h2,.panel h2{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;font-size:clamp(25px,5vw,32px);letter-spacing:.6px;text-transform:uppercase}
+button,.pill,nav button{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;font-size:17px;letter-spacing:.5px;text-transform:uppercase}
+nav button{font-size:16px}
+article b{font-family:'Barlow Condensed',Impact,sans-serif;font-size:23px;font-weight:800;letter-spacing:.2px}
+header .sub{font-family:'Outfit',system-ui,sans-serif;font-size:18px;font-weight:600}
+input,textarea,select{font-family:'Outfit',system-ui,sans-serif}
+@media(max-width:480px){nav button{font-size:15px}header h1{font-size:clamp(54px,13vw,72px)}}
 </style></head><body><header><div style="max-width:760px;margin:auto"><div class="row"><h1>⚡ AURA FARM</h1><span class="pill">PLAYABLE DEMO</span></div><p class="sub">Real-life highlights. Your crew decides the aura.</p></div></header><main><section class="panel"><div class="row"><div><b>👥 Multiplayer beta</b><p class="muted">Profiles and private leagues · Supabase setup required</p></div><a href="./multiplayer.html" style="color:#f6cc69">Open multiplayer →</a></div></section><nav id="nav"></nav><div id="app"></div></main><footer>Demo only · Data saved on this device · No real AI video analysis yet</footer>
 <script>
 const KEY='aura-farm-demo-v1';
