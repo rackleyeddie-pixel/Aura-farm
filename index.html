@@ -1,6 +1,36 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aura Farm</title><style>
 :root{font-family:system-ui,-apple-system,sans-serif;color:#f4f1ff;background:#10101b}*{box-sizing:border-box}body{margin:0}header{padding:24px 18px;background:linear-gradient(130deg,#322057,#141424);border-bottom:1px solid #49376a}h1{margin:0;font-size:32px}h2{margin:0 0 12px;font-size:21px}.sub{color:#c2b5dc}main{max-width:760px;margin:auto;padding:18px}nav{display:flex;gap:8px;overflow:auto;padding:12px 0}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:12px 15px;background:#8656ee;color:white;font-weight:700}button.secondary{background:#28243d}button:focus-visible{outline:3px solid gold}.panel{background:#1e1b2e;border:1px solid #423655;border-radius:18px;padding:18px;margin:14px 0}.gold{color:#f6cc69}.muted{color:#bdb2d1;font-size:14px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}input,textarea,select{width:100%;padding:12px;border-radius:10px;background:#141223;color:white;border:1px solid #54446d;margin:7px 0 12px}label{display:block;margin-top:10px}article{padding:13px 0;border-bottom:1px solid #3d3550}article:last-child{border:0}.pill{display:inline-block;border-radius:30px;padding:5px 9px;background:#423258;color:#f6cc69;font-size:12px}small{color:#c5b6df}a{color:#d9c3ff}footer{text-align:center;padding:25px;color:#a89cbe}
+
+/* Aura Farm: electric arcade visual refresh */
+:root{color:#fff8ec;background:#090b19;font-family:system-ui,-apple-system,sans-serif}
+body{min-height:100vh;background:radial-gradient(ellipse at 85% 3%,#6625b755,transparent 38%),radial-gradient(ellipse at 0% 35%,#04d5c42e,transparent 40%),#090b19}
+header{position:relative;overflow:hidden;padding:37px 18px 43px;background:linear-gradient(115deg,#28105b,#441783 48%,#112c56);border-bottom:3px solid #e4ff62;box-shadow:0 12px 45px #9d4bff44}
+header:before{content:"";position:absolute;width:250px;height:250px;right:-55px;top:-110px;border:35px solid #ffffff13;border-radius:50%;transform:rotate(-20deg)}
+header:after{content:"✦   ✧   ✦";position:absolute;right:9%;bottom:8px;font-size:28px;letter-spacing:20px;color:#e8ff73;opacity:.65;pointer-events:none}
+header h1{font-size:clamp(37px,9vw,66px);font-weight:1000;letter-spacing:-2px;line-height:1.05;color:#f2ff76;text-shadow:4px 4px 0 #ff39a4,0 0 25px #ec68ff88;transform:rotate(-1deg)}
+header .sub{font-size:17px;color:#f6eaff;font-weight:650;max-width:460px}
+header .pill{background:#f2ff76;color:#231046;font-weight:900;box-shadow:0 0 22px #e8ff7c77}
+main{padding-top:23px}
+nav{gap:10px;padding:16px 0;scrollbar-width:thin}
+button{background:linear-gradient(135deg,#fa3db2,#8a49ff);box-shadow:0 5px 0 #49217c,0 8px 20px #0006;transition:transform .12s,filter .12s;letter-spacing:.1px}
+button:hover{filter:brightness(1.15);transform:translateY(-2px)}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #49217c}
+button.secondary{background:#292442;border:1px solid #755da6;box-shadow:none}
+nav button{white-space:nowrap;border-radius:999px;padding:11px 16px}
+nav button:not(.secondary){background:#e9ff73;color:#241146;box-shadow:0 4px 0 #8b9e38}
+.panel{background:linear-gradient(150deg,#262040f2,#16152df5);border:1px solid #8055c5;border-radius:22px;padding:20px;box-shadow:0 8px 30px #0006,inset 0 1px #ffffff14}
+.panel h2{color:#f0ff84;font-weight:900}
+.panel:first-of-type{border-color:#ec55c5;background:linear-gradient(110deg,#40205c,#1a1d43)}
+.gold{color:#f0ff76;font-weight:900}
+.pill{background:#4d296b;border:1px solid #a86deb;color:#f4ff83;font-weight:800}
+input,textarea,select{background:#10132c;border:1px solid #8460ba;border-radius:12px}
+input:focus,textarea:focus,select:focus{outline:2px solid #eaff76}
+article{padding:18px 0;border-color:#634b84}
+article b{font-size:17px}
+a{color:#f2ff76;font-weight:700}
+footer{color:#c4b9d6}
+@media(max-width:480px){header{padding-top:30px}header .pill{font-size:10px}main{padding:13px}nav button{font-size:13px;padding:10px 13px}.panel{padding:16px}}
 </style></head><body><header><div style="max-width:760px;margin:auto"><div class="row"><h1>⚡ AURA FARM</h1><span class="pill">PLAYABLE DEMO</span></div><p class="sub">Real-life highlights. Your crew decides the aura.</p></div></header><main><section class="panel"><div class="row"><div><b>👥 Multiplayer beta</b><p class="muted">Profiles and private leagues · Supabase setup required</p></div><a href="./multiplayer.html" style="color:#f6cc69">Open multiplayer →</a></div></section><nav id="nav"></nav><div id="app"></div></main><footer>Demo only · Data saved on this device · No real AI video analysis yet</footer>
 <script>
 const KEY='aura-farm-demo-v1';
